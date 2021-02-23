@@ -1,0 +1,19 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="bulbType">
+    <th mat-header-cell *matHeaderCellDef>Bulb Type</th>
+    <td mat-cell *matCellDef="let led">{{led.bulbType}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="model">
+    <th mat-header-cell *matHeaderCellDef>Model</th>
+    <td mat-cell *matCellDef="let led">{{led.model}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef>Quantity</th>
+    <td mat-cell *matCellDef="let led">{{led.quantity}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
